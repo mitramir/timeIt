@@ -1,0 +1,13 @@
+{
+  "predictions": [
+    {
+      "upper_bound": 250.93867492675781,
+      "value": 90.993568420410156,
+      "lower_bound": 17.754068374633789
+    }
+  ],
+  "deployedModelId": "6094403836762390528",
+  "model": "projects/959908856411/locations/us-central1/models/4854075555793862656",
+  "modelDisplayName": "BookData_20220114_2022114115621",
+  "modelVersionId": "1"
+}

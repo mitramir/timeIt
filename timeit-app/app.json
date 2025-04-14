@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "TimeIt",
+    "slug": "timeit",
+    "owner": "timeit",
+    "version": "0.0.15",
+    "orientation": "portrait",
+    "icon": "./app/assets/ti-icon2-small.png",
+    "splash": {
+      "image": "./app/assets/splash-fotor.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ai.timeit",
+      "config": {},
+      "infoPlist": {
+        "NSCameraUsageDescription": "TimeIt app needs access to your device's camera to scan book barcodes and provide quick, relevant information about books."
+      }
+    },
+    "android": {
+      "package": "com.timeit.ai",
+      "versionCode": 19,
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/ti-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./app/assets/favicon.png"
+    },
+    "description": "MOBILE APP FOR AMAZON SELLERS \n",
+    "extra": {
+      "eas": {
+        "projectId": "0273f920-b1cd-4f0b-bfe9-af21b3b9a804"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "33.0.0",
+            "kotlinVersion": "1.8.0"
+          },
+          "ios": {
+            "deploymentTarget": "13.0"
+          }
+        }
+      ]
+    ]
+  }
+}

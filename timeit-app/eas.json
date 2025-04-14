@@ -1,0 +1,35 @@
+{
+  "cli": {
+    "version": ">= 3.11.0",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "meysam@timeit.ai",
+        "ascAppId": "6450649046",
+        "appleTeamId": "X2HW9W4LK4"
+      },
+      "android": {
+        "serviceAccountKeyPath": "../AndroidSAKey/pc-api-7837129862611689539-600-1769dcbf64f4.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "mail": {
+        "password": "nodeapp_password"
+    },
+    "jwtPrivateKey": "JWT_PRIVATE_KEY"
+}

@@ -1,0 +1,35 @@
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Ignore environment files
+**/.env
+
+# Ignore build output
+**/dist/
+**/build/
+
+# Ignore macOS or VSCode stuff
+.DS_Store
+.vscode/
+
+# Optional: ignore log files
+*.log
+
+
+# Ignore node_modules in the timeit-app folder
+timeit-app/node_modules/
+
+# Ignore Expo-related files in the timeit-app folder
+timeit-app/.expo/
+
+# Ignore any other files or folders inside timeit-app
+timeit-app/*.jks
+timeit-app/*.p8
+timeit-app/*.p12
+timeit-app/*.key
+timeit-app/*.mobileprovision
+timeit-app/*.orig.*
+timeit-app/web-build/
+
+# macOS specific files
+timeit-app/.DS_Store

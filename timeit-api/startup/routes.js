@@ -1,0 +1,52 @@
+const express = require("express");
+const error = require("../middleware/error");
+const cors = require("cors");
+const home = require("../routes/home");
+const users = require("../routes/users");
+const auth = require("../routes/auth");
+const scan = require("../routes/scanItems");
+const search = require("../routes/searchItems");
+const price = require("../routes/prices");
+const importAsin = require("../routes/import");
+const eligibility = require("../routes/sellingEligibility");
+const history = require("../routes/histories");
+// const report = require("../routes/report");
+const stripe = require("../routes/stripe");
+const credit = require("../routes/credit");
+const plan = require("../routes/plans");
+const offer = require("../routes/offers");
+const subscribe = require("../routes/subscribe");
+const passwordReset = require("../routes/passwordReset");
+const accountConfirmation = require("../routes/accountConfirmation");
+const rcWebhook = require("../routes/rcWebhook");
+
+module.exports = function (app) {
+  app.use("/api/stripe", express.raw({ type: "*/*" }));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.static("public"));
+  app.use(cors());
+  app.use("/", home);
+  app.use("/api/users", users);
+  app.use("/api/auth", auth);
+  app.use("/api/scan", scan);
+  app.use("/api/search", search);
+  app.use("/api/price", price);
+  app.use("/api/import", importAsin);
+  app.use("/api/eligibility", eligibility);
+  app.use("/api/history", history);
+  // app.use("/api/report", report);
+  app.use("/api/stripe", stripe);
+  app.use("/api/credit", credit);
+  app.use("/api/plan", plan);
+  app.use("/api/offer", offer);
+  app.use("/api/subscribe", subscribe);
+  app.use("/api/password_reset", passwordReset);
+  app.use("/api/account_confirmation", accountConfirmation);
+  app.use("/api/rc_webhook", rcWebhook);
+  app.use("/static", express.static("public"));
+
+  app.set("view engine", "pug");
+
+  app.use(error);
+};

@@ -1,0 +1,1 @@
+echo ${GOOGLE_CREDENTIALS} > /app/timeit-key.json

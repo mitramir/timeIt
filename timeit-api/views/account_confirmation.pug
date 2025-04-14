@@ -1,0 +1,79 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title TimeIt Account Confirmation
+    style.
+      .mainDiv {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .cardStyle {
+        max-width: 90%;
+        border-color: white;
+        background: #fff;
+        padding: 36px 10px;
+        border-radius: 4px;
+        margin: 30px 0;
+        box-shadow: 0px 0 2px 0 rgba(0,0,0,0.25);
+      }
+      #signupLogo {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .formTitle {
+        font-weight: 400;
+        margin-top: 20px;
+        color: #2F2D3B;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .inputLabel {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 6px;
+        margin-top: 24px;
+      }
+      input:disabled {
+        cursor: not-allowed;
+        border: solid 1px #eee;
+      }
+      .buttonWrapper {
+        margin-top: 40px;
+      }
+      .submitButton {
+        width: 70%;
+        height: 40px;
+        margin: auto;
+        display: block;
+        color: #000;
+        background-color: #FFC145;
+        border-color: #FFC145;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .submitButton:disabled,
+      button[disabled] {
+        border: 1px solid #cccccc;
+        background-color: #cccccc;
+        color: #666666;
+      }
+  body(translate='no')
+    .mainDiv
+      .cardStyle
+        form#signupForm(action='', method='post', name='signupForm')
+          div#signupLogo
+            img(src='/static/timeit-icon.png', alt='Logo')
+          h2.formTitle
+            | Please Confirm Your Timeit Account
+          .buttonWrapper
+            button#submitButton.submitButton.pure-button.pure-button-primary(type='submit')
+              span Confirm
